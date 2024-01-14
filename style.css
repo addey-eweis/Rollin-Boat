@@ -2116,6 +2116,10 @@ html {
    align-items: flex-start;
    display: flex;
  }
+
+ .featuredImage{
+  height: 50vh;
+ }
  
  .w-layout-vflex {
    flex-direction: column;
@@ -2845,6 +2849,7 @@ html {
  }
  
  .footer-section {
+  border-top: #000 2px solid;
    background-color: var(--bg-secondary);
    margin-top: 20px;
    padding-top: 120px;
@@ -3544,6 +3549,9 @@ html {
  
  #w-node-_6bc30bed-6c00-9127-1f32-58c9e1afde5b-4688d09f, #w-node-_6bc30bed-6c00-9127-1f32-58c9e1afde5f-4688d09f {
    grid-area: span 1 / span 1 / span 1 / span 1;
+   height: 90vh;
+
+   filter:contrast(1.6) grayscale(1);
  }
  
  #w-node-_6bc30bed-6c00-9127-1f32-58c9e1afde60-4688d09f {

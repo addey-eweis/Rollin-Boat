@@ -1171,42 +1171,6 @@
    });
 
    // packages/shared/render/plugins/BaseSiteModules/webflow-brand.js
-   var require_webflow_brand = __commonJS({
-      "packages/shared/render/plugins/BaseSiteModules/webflow-brand.js"(exports, module) {
-         "use strict";
-         var Webflow = require_webflow_lib();
-         Webflow.define("brand", module.exports = function ($) {
-            var api = {};
-            var doc = document;
-            var $html = $("html");
-            var $body = $("body");
-            var namespace = ".w-webflow-badge";
-            var location = window.location;
-            var isPhantom = /PhantomJS/i.test(navigator.userAgent);
-            var fullScreenEvents = "fullscreenchange webkitfullscreenchange mozfullscreenchange msfullscreenchange";
-            var brandElement;
-            api.ready = function () {
-               var shouldBrand = $html.attr("data-wf-status");
-               var publishedDomain = $html.attr("data-wf-domain") || "";
-               if (/\.webflow\.io$/i.test(publishedDomain) && location.hostname !== publishedDomain) {
-                  shouldBrand = true;
-               }
-               if (shouldBrand && !isPhantom) {
-                  brandElement = brandElement || createBadge();
-                  ensureBrand();
-                  setTimeout(ensureBrand, 500);
-                  $(doc).off(fullScreenEvents, onFullScreenChange).on(fullScreenEvents, onFullScreenChange);
-               }
-            };
-            function onFullScreenChange() {
-               var fullScreen = doc.fullScreen || doc.mozFullScreen || doc.webkitIsFullScreen || doc.msFullscreenElement || Boolean(doc.webkitFullscreenElement);
-               $(brandElement).attr("style", fullScreen ? "display: none !important;" : "");
-            }
-
-            return api;
-         });
-      }
-   });
 
    // packages/shared/render/plugins/BaseSiteModules/webflow-edit.js
    var require_webflow_edit = __commonJS({
